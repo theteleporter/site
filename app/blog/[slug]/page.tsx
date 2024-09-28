@@ -83,10 +83,12 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <Link href='/blog' className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm'>
+      <Link 
+          href='/blog' 
+          className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm transition-all duration-500 ease-out'>
        All posts
       </Link>
-      <h1 className="title font-semibold text-2xl tracking-tighter mt-10">
+      <h1 className="title font-semibold text-2xl tracking-tighter mt-8">
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
