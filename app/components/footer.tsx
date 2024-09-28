@@ -18,7 +18,7 @@ function ArrowIcon() {
 export default function Footer() {
   return (
     <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-row space-x-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+      <ul className="font-sm text-sm mt-8 flex flex-row space-x-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -53,8 +53,8 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p className="mt-8 text-sm text-neutral-600 dark:text-neutral-300">
-        © {new Date().getFullYear()} The Teleporter
+      <p className="mt-8 text-xs text-neutral-600 dark:text-neutral-300">
+        &copy; {new Date().getFullYear()} The Teleporter
       </p>
     </footer>
   )
