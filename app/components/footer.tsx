@@ -27,7 +27,7 @@ export default function Footer() {
             href="https://github.com/theteleporter"
           >
           {/** <ArrowIcon /> **/}
-            <p className="ml-2 h-7">github</p>
+            <p className="h-7">github</p>
           </a>
         </li>
         <li>
@@ -38,7 +38,7 @@ export default function Footer() {
             href="https://x.com/@theteleporter_"
           >
          {/** <ArrowIcon /> **/}
-            <p className="ml-2 h-7">twitter</p>
+            <p className="ml-1 h-7">twitter</p>
           </a>
         </li>
       </ul>
