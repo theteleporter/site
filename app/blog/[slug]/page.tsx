@@ -83,7 +83,7 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <Link href='/blog' className='rounded-full px-2 py-1 bg-zinc-800 border-stone-800 border'>
+      <Link href='/blog' className='rounded-full px-2 py-1 bg-zinc-900 border-stone-600 border mb-10 text-sm'>
        All posts
       </Link>
       <h1 className="title font-semibold text-2xl tracking-tighter">
