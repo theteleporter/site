@@ -21,7 +21,7 @@ export default function Footer() {
       <ul className="font-sm text-sm mt-8 flex flex-row space-x-2 text-neutral-600 md:flex-row md:space-x-2 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/theteleporter"
@@ -32,7 +32,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
             rel="noopener noreferrer"
             target="_blank"
             href="https://x.com/@theteleporter_"
@@ -47,7 +47,7 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} The Teleporter
       </p>
           <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
             rel="noopener noreferrer"
             target="_blank"
             href="/rss"
