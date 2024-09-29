@@ -12,11 +12,6 @@ const navItems = {
 export function Navbar() {
   const router = useTransitionRouter()
 
-  const handleNavClick = (e, path) => {
-    e.preventDefault()
-    router.push(path)
-  }
-
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -30,7 +25,9 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  onClick={(e) => handleNavClick(e, path)}
+                  onClick={() => {
+        router.push(path)
+      }}
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 cursor-pointer nav-item"
                   style={{ viewTransitionName: `nav-${name}` }}
                 >
