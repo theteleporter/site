@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 function ArrowIcon() {
   return (
     <svg
@@ -21,41 +23,39 @@ export default function Footer() {
       <ul className="font-sm text-sm mt-8 flex flex-row space-x-2 text-neutral-600 md:flex-row md:space-x-2 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
+            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/theteleporter"
+            style={{ viewTransitionName: 'footer-github' }}
           >
-          {/** <ArrowIcon /> **/}
             <p className="h-7">github</p>
           </a>
         </li>
         <li>
           <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
+            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
             rel="noopener noreferrer"
             target="_blank"
             href="https://x.com/@theteleporter_"
+            style={{ viewTransitionName: 'footer-twitter' }}
           >
-         {/** <ArrowIcon /> **/}
             <p className="ml-1 h-7">twitter</p>
           </a>
         </li>
       </ul>
       <div className="flex justify-between mx-auto mt-8 text-neutral-600 dark:text-neutral-300 text-xs">
-      <p>
-        &copy; {new Date().getFullYear()} The Teleporter
-      </p>
-          <a
-            className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-         {/** <ArrowIcon /> **/}
-            <p className="ml-2">rss</p>
-          </a>
-        </div>
+        <p style={{ viewTransitionName: 'footer-copyright' }}>
+          &copy; {new Date().getFullYear()} The Teleporter
+        </p>
+        <Link
+          className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
+          href="/rss"
+          style={{ viewTransitionName: 'footer-rss' }}
+        >
+          <p className="ml-2">rss</p>
+        </Link>
+      </div>
     </footer>
   )
 }
