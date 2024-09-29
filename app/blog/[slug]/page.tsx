@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
