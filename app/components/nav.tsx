@@ -1,6 +1,4 @@
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { startViewTransition } from 'next-view-transitions'
+import { Link, useTransitionRouter } from 'next-view-transitions'
 
 const navItems = {
   '/': {
@@ -12,13 +10,11 @@ const navItems = {
 }
 
 export function Navbar() {
-  const router = useRouter()
+  const router = useTransitionRouter()
 
   const handleNavClick = (e, path) => {
     e.preventDefault()
-    startViewTransition(() => {
-      router.push(path)
-    })
+    router.push(path)
   }
 
   return (
