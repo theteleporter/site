@@ -84,12 +84,15 @@ export default function Blog({ params }) {
             }),
           }}
         />
-        <Link 
-          href='/blog' 
-          className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm transition-all duration-500 ease-out'
-        >
-          All posts
-        </Link>
+        <div className="mb-8">
+          <Link 
+            href="/blog"
+            className="rounded-full px-4 py-2 bg-zinc-900 hover:bg-zinc-800 text-white border-stone-700 hover:border-none border text-sm transition-all duration-300 ease-out inline-block"
+            style={{ viewTransitionName: 'all-posts-button' }}
+          >
+            ← All posts
+          </Link>
+        </div>
         <h1 
           className="title font-semibold text-2xl tracking-tighter mt-8"
           style={{ viewTransitionName: `title-${post.slug}` }}
