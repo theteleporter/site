@@ -1,4 +1,4 @@
-import { Link, useTransitionRouter } from 'next-view-transitions'
+import { Link } from 'next-view-transitions'
 
 const navItems = {
   '/': {
@@ -10,7 +10,6 @@ const navItems = {
 }
 
 export function Navbar() {
-  const router = useTransitionRouter()
 
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
