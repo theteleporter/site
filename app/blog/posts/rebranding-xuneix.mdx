@@ -17,41 +17,49 @@ function sanitizeInput(input) {
 }
 const safeInput = sanitizeInput(userInput);
 ```
+
 ## Why Security Matters Now More Than Ever
 
 With the increasing complexity of web applications and the interconnectedness of services, a single vulnerability can result in catastrophic breaches. The infamous [Equifax breach](https://en.wikipedia.org/wiki/2017_Equifax_data_breach) and the rise in phishing attacks have underscored the importance of securing both data and application logic. Developers must be proactive rather than reactive, addressing security from the ground up.
 
-## Introducing Neix: Securing Your Applications with Ease
+## Introducing Neix: Focus on Route Protection
 
-I've always wanted to create something that could help developers around the world integrate security into their projects more seamlessly. Over the past few days, I’ve been revisiting one of my older projects, [Xuneix](https://xuneix.theteleporter.me) (_yeah, I know—terrible name, can’t pronounce it either_). My goal is to transform it into a tool that not only optimizes performance but also strengthens security from the ground up, ensuring protection against common vulnerabilities like XSS, CSRF, and man-in-the-middle (MITM) attacks.
+While many security packages focus on comprehensive solutions like managing sessions and authentication, **Neix** takes a different approach by concentrating specifically on **route protection**. Inspired by my work on an earlier project, [XUNEIX](https://xuneix.theteleporter.me), Neix helps developers easily safeguard their admin panels or critical routes with **dynamic, time-sensitive URLs**—effectively reducing the risk of unauthorized access.
+
+Neix’s core utility revolves around protecting specific routes by constantly changing the URL and adding **secure tokens**. This creates an extra barrier for attackers, making it harder to discover or predict critical entry points in your application.
 
 ### What Neix Offers
 
-Neix will provide built-in utilities to protect your applications with minimal effort:
+Neix enables you to protect your routes with minimal configuration while enhancing security:
 
-- **Token-based Authentication:** Automatically handle user authentication securely.
-- **Input Validation and Sanitization:** Prevent XSS, SQL injection, and other attacks.
-- **Data Encryption:** Ensure sensitive data is encrypted at rest and in transit.
-- **Secure Session Management:** Protect user sessions with robust techniques.
+- **Dynamic URL Generation:** Automatically rotate the URLs protecting your sensitive routes.
+- **Token-based URL Protection:** Adds cryptographically generated tokens to make your routes harder to guess or access.
+- **Customizable Rotation Frequency:** Set how often the URL changes, whether it’s every few minutes or once a day (ideal for use with Vercel Cron Jobs).
+- **Database Integration:** Securely store URLs, tokens, and rotation history using a database.
+- **Admin Notifications:** Automatically send the newly rotated URL to administrators via email.
 
 ```ts
-// Example of using token-based authentication with Neix
-import { authenticateUser } from 'neix';
+// Example of protecting a route with Neix
+import { rotateLink, verifyToken } from 'neix';
 
-const token = authenticateUser(username, password);
+const secureLink = rotateLink('/admin', rotationFrequency);
 
-if (token) {
-  // Secure access granted
-  console.log('User authenticated');
+// When accessing the admin route
+if (verifyToken(token)) {
+  console.log('Access granted');
 } else {
-  console.log('Authentication failed');
+  console.log('Access denied');
 }
 ```
 
-## The Future of Web Security
+## The Future of Web Security: Focused, Lightweight Solutions
 
-As the web continues to evolve, so will the threats. The security landscape is in constant flux, requiring developers to stay ahead of the curve by implementing security practices that can mitigate risks. By releasing Neix as an open-source package, I hope to contribute to a safer web ecosystem. Whether you’re a solo developer or part of an enterprise team, Neix aims to be your go-to solution for securing your applications from day one.
+The ever-evolving landscape of web development means that new security threats are constantly emerging. Traditional security solutions often focus on managing user sessions or global authentication. Neix, however, hones in on protecting individual routes by dynamically rotating URLs and requiring secure tokens for access.
+
+This lightweight and focused approach aims to fill a gap where simpler, flexible solutions are needed to protect highly sensitive areas of an application—such as admin panels—without the complexity of a full authentication framework.
+
+By keeping the package open-source, I hope to contribute to a more secure web by giving developers a tool that makes route protection seamless.
 
 ## Conclusion
 
-The days of treating security as an afterthought are long gone. With Neix, developers can now embed security into their apps with ease, reducing the risk of data breaches and ensuring that their users' information remains safe. Let's work together to create a safer web, one line of code at a time.
+Security in web applications can no longer be an afterthought. With **Neix**, developers can easily protect sensitive routes with dynamic URL rotation and token-based authentication. This not only reduces the risk of unauthorized access but also ensures that critical parts of your application remain secure without the overhead of a full security stack. Let’s work together to build a safer web, one route at a time.
