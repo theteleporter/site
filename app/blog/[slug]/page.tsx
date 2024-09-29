@@ -3,7 +3,6 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 import { Link, ViewTransitions } from 'next-view-transitions'
-import { useTransitionRouter } from 'next-view-transitions'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -60,8 +59,7 @@ export default function Blog({ params }) {
     notFound()
   }
 
-const router = useTransitionRouter()
- 
+
   return (
     <ViewTransitions>
       <section>
@@ -88,13 +86,13 @@ const router = useTransitionRouter()
           }}
         />
         <div className="mb-8">
-         <button className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm transition-all duration-500 ease-out outline-none'
+         <Link
+ className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm transition-all duration-500 ease-out'
             style={{ viewTransitionName: 'all-posts-button' }}
- onClick={() => {
-        router.push('/blog')
-      }}>
+ href='/blog'
+>
         All posts
-      </button>
+      </Link>
         </div>
         <h1 
           className="title font-semibold text-2xl tracking-tighter mt-8"
