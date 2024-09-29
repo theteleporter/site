@@ -1,4 +1,6 @@
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { startViewTransition } from 'next-view-transitions'
 
 const navItems = {
   '/': {
@@ -10,6 +12,15 @@ const navItems = {
 }
 
 export function Navbar() {
+  const router = useRouter()
+
+  const handleNavClick = (e, path) => {
+    e.preventDefault()
+    startViewTransition(() => {
+      router.push(path)
+    })
+  }
+
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -23,7 +34,9 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 cursor-pointer"
+                  onClick={(e) => handleNavClick(e, path)}
+                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 cursor-pointer nav-item"
+                  style={{ viewTransitionName: `nav-${name}` }}
                 >
                   {name}
                 </Link>
