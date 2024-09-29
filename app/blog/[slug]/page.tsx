@@ -87,10 +87,10 @@ export default function Blog({ params }) {
         <div className="mb-8">
           <Link 
             href="/blog"
-            className="rounded-full px-4 py-2 bg-zinc-900 hover:bg-zinc-800 text-white border-stone-700 hover:border-none border text-sm transition-all duration-300 ease-out inline-block"
+            className='rounded-full px-2 py-1 bg-zinc-900 hover:bg-zinc-800 border-stone-700 hover:border-none border text-sm transition-all duration-500 ease-out'
             style={{ viewTransitionName: 'all-posts-button' }}
           >
-            ← All posts
+            All posts
           </Link>
         </div>
         <h1 
