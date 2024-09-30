@@ -23,9 +23,11 @@ export function generateMetadata({ params }) {
     title,
     publishedAt: publishedTime,
     summary: description,
+    image,
   } = post.metadata
-
-  const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(title)}&date=${encodeURIComponent(formatDate(publishedTime))}`
+  let ogImage = image
+    ? image
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -39,9 +41,6 @@ export function generateMetadata({ params }) {
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: title,
         },
       ],
     },
@@ -61,6 +60,7 @@ export default function Blog({ params }) {
     notFound()
   }
 
+
   return (
     <ViewTransitions>
       <section>
@@ -75,7 +75,9 @@ export default function Blog({ params }) {
               datePublished: post.metadata.publishedAt,
               dateModified: post.metadata.publishedAt,
               description: post.metadata.summary,
-              image: `${baseUrl}/api/og?title=${encodeURIComponent(post.metadata.title)}&date=${encodeURIComponent(formatDate(post.metadata.publishedAt))}`,
+              image: post.metadata.image
+                ? `${baseUrl}${post.metadata.image}`
+                : `/og?title=${encodeURIComponent(post.metadata.title)}`,
               url: `${baseUrl}/blog/${post.slug}`,
               author: {
                 '@type': 'Person',
