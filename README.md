@@ -1,6 +1,6 @@
 # Site
 
-This is The Teleporter site with the blog.
+This is the code that powers The Teleporter site.
 It includes:
 
 - MDX and Markdown support
