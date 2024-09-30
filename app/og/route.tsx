@@ -3,6 +3,7 @@ import { ImageResponse } from 'next/og'
 export function GET(request: Request) {
   const url = new URL(request.url)
   const title = url.searchParams.get('title') || 'The Teleporter'
+  const datePublished = url.searchParams.get('date') || 'Date not provided'
 
   return new ImageResponse(
     (
@@ -14,9 +15,7 @@ export function GET(request: Request) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'flex-end',
-          backgroundColor: '#1F2937',
-          backgroundImage: 'radial-gradient(circle at 25px 25px, #374151 2%, transparent 0%), radial-gradient(circle at 75px 75px, #374151 2%, transparent 0%)',
-          backgroundSize: '100px 100px',
+          backgroundColor: '#000000',
           padding: '60px',
         }}
       >
@@ -63,44 +62,27 @@ export function GET(request: Request) {
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
             marginTop: '20px',
           }}
         >
-          <div
-            style={{
-              width: '40px',
-              height: '40px',
-              borderRadius: '50%',
-              backgroundColor: '#60A5FA',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginRight: '16px',
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </div>
           <span
             style={{
               fontSize: '24px',
               color: '#E5E7EB',
+              marginBottom: '10px',
             }}
           >
-            The Teleporter
+            Published on: {datePublished}
+          </span>
+          <span
+            style={{
+              fontSize: '24px',
+              color: '#60A5FA',
+            }}
+          >
+            @theteleporter_
           </span>
         </div>
       </div>
