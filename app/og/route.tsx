@@ -79,7 +79,7 @@ export function GET(request: Request) {
           <span
             style={{
               fontSize: '24px',
-              color: '#60A5FA',
+              color: '#FFFFFF',
             }}
           >
             @theteleporter_
