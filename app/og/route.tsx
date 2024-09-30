@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 export function GET(request: Request) {
   const url = new URL(request.url)
   const title = url.searchParams.get('title') || 'The Teleporter'
-  const datePublished = url.searchParams.get('date') || 'Date not provided'
+  const datePublished = url.searchParams.get('date') || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
   return new ImageResponse(
     (
