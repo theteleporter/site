@@ -74,7 +74,7 @@ export function GET(request: Request) {
               marginBottom: '10px',
             }}
           >
-            Published on: {datePublished}
+            {datePublished}
           </span>
           <span
             style={{
