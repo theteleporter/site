@@ -11,7 +11,7 @@ import { Metadata } from 'next'
 **/}
 const resumeData = {
   name: "John Doe",
-  title: "Full Stack Developer",
+  title: "Frontend Developer",
   contact: {
     email: "john.doe@email.com",
     phone: "(123) 456-7890",
