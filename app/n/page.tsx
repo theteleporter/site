@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 // import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
 import { Metadata } from 'next'
