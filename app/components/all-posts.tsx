@@ -1,4 +1,4 @@
-import { Link } from 'next-transition-link'
+import { Link } from 'next-view-transitions'
 
 export function AllPosts(){
 return (
