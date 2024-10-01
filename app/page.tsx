@@ -1,4 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
+import { Work } from 'app/components/work'
 import { baseUrl } from 'app/sitemap'
 
 export const metadata = {
@@ -39,6 +40,9 @@ export default function Page() {
       <div className="my-8">
         <BlogPosts />
       </div>
+
+      <h1 className="font-semibold text-xl mb-8 tracking-tighter">Work</h1>
+      <Work />
     </section>
   )
 }
