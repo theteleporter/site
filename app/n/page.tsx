@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
+// import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -74,22 +74,22 @@ export default function ResumePage() {
           <p className="text-xl text-gray-600">{resumeData.title}</p>
           <div className="flex flex-wrap justify-center gap-4 mt-4">
             <a href={`mailto:${resumeData.contact.email}`} className="flex items-center text-gray-600 hover:text-gray-800 print:hover:text-gray-600">
-              <Mail className="w-5 h-5 mr-2" />
+          {/**    <Mail className="w-5 h-5 mr-2" />**/}
               {resumeData.contact.email}
             </a>
             <a href={`tel:${resumeData.contact.phone}`} className="flex items-center text-gray-600 hover:text-gray-800 print:hover:text-gray-600">
-              <Phone className="w-5 h-5 mr-2" />
+       {/**       <Phone className="w-5 h-5 mr-2" />**/}
               {resumeData.contact.phone}
             </a>
             <span className="flex items-center text-gray-600">
-              <MapPin className="w-5 h-5 mr-2" />
+         {/**     <MapPin className="w-5 h-5 mr-2" />**/}
               {resumeData.contact.location}
             </span>
             <a href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 print:hover:text-gray-600">
-              <Linkedin className="w-5 h-5" />
+    {/**          <Linkedin className="w-5 h-5" />**/}
             </a>
             <a href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 print:hover:text-gray-600">
-              <Github className="w-5 h-5" />
+     {/**         <Github className="w-5 h-5" />**/}
             </a>
           </div>
         </header>
