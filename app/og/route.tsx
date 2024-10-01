@@ -62,8 +62,8 @@ export function GET(request: Request) {
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
+            flexDirection: 'row',
+            alignItems: 'between',
             marginTop: '20px',
           }}
         >
