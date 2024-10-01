@@ -6,16 +6,53 @@ summary: 'Data migration has long been a complex, manual process, but I’m work
 
 When I first set out to tackle the complexities of data migration, I knew there had to be a better way. For years, companies have faced complicated, time-consuming, and manual processes that made migrating data feel like an overwhelming task. My goal? To change that entirely.
 
-While I can’t reveal every detail just yet, I want to give you a sneak peek into what I’m building. This project is more than just another migration tool—it's a solution that simplifies, automates, and scales to meet the needs of modern businesses.
+While I can’t reveal every detail just yet, I want to give you a sneak peek into what I’m building. This project is more than just another migration tool—it’s a solution that simplifies, automates, and scales to meet the needs of modern businesses.
+
+## How It Started
+
+Earlier this year, I set out to build an open-source streaming service template that other developers could use as a foundation for their own applications. Things were going smoothly until I hit a major roadblock while testing the video player functionality with large 4K videos. I needed to upload these videos to my Azure storage container but quickly realized Azure didn't allow remote uploads directly from URLs. This was a significant setback, especially since I had over 500GB of video files stored remotely. There was no way I was going to waste my data plan by downloading and re-uploading all that manually.
+
+Faced with this challenge, I dove into research, determined to find a workaround that would save both time and resources. It was a frustrating process that took days, but it led to some important realizations:
+
+### 1. **Using Third-Party Extensions**
+Many developers create extensions to solve issues like these, so I scoured the marketplace for one that would let me upload files to Azure via remote links. Unfortunately, I couldn’t find anything that fit my needs.
+
+### 2. **Third-Party Services Like MultCloud**
+I considered third-party apps like MultCloud, which offer cloud-to-cloud transfer solutions. However, none of them allowed remote uploads via links, and worse, they didn’t support Azure or AWS. So, I had to rule this option out too.
+
+### 3. **Azure Function Scripts**
+I experimented with Azure Function scripts to automate the process. While somewhat effective, this approach required constant monitoring, which I didn’t have the time for. The scripts frequently crashed due to bugs. I even developed a tool called *Crept Sync* to help automate the process, but serverless functions were too limited in duration—"one minute is not enough to transfer 500GB of data."
+
+### 4. **Using the Azure CLI**
+The Azure CLI allowed me to download remote files to my PC and upload them to the storage container, but the thought of downloading all that data locally? No thanks. I needed something better.
+
+### 5. **Using rclone for Remote Transfers**
+While browsing forums, I came across [rclone](https://rclone.org), which could help automate remote file transfers. I was familiar with rclone's command-line interface, so I decided to give it a shot. After running several tests, I ran into a familiar problem—I still needed a reliable internet connection to download files locally and monitor the process.
+
+Then it hit me: I could run rclone on an Azure virtual machine. By setting up an instance of a virtual machine and running rclone directly from the cloud, I no longer needed to monitor the process. The best part? I only paid for the resources I used, saving both time and money.
+
+---
+
+## Turning the Experience into a New Project
+
+That experience got me thinking. If I had faced such a frustrating challenge, others probably had too. It became clear that a simpler, more flexible solution was needed for large-scale data transfers, and that’s when the idea for my new project began to take shape.
+
+I’m building a platform that enables seamless, cost-effective migrations for individuals and enterprises. By drawing on my past experience, I aim to simplify the migration process and eliminate the frustrations that come with large-scale data transfers—whether you're dealing with cloud storage, media files, or complex infrastructures.
 
 Here’s what I’m focusing on:
 
-- **Orchestrated Migration**: I’m developing a way for users to fully plan and orchestrate their migration from start to finish. Think of it as creating a blueprint for your migration, laying out every step before data even begins to move. It’s all about precision and control, ensuring the process runs smoothly.
+### **Orchestrated Migration**
+I'm developing a way for users to fully plan and orchestrate their migration from start to finish. Think of it as creating a detailed blueprint for your migration, laying out every step before data starts moving. It’s all about precision and control, ensuring everything runs smoothly.
 
-- **Preview Before You Move**: One of the features I’m most excited about is giving users the ability to run a dry run—a preview of how their migration will unfold. No more second-guessing or surprises. You’ll know exactly how things will go before committing to the full process.
+### **Preview Before You Move**
+One of the features I’m most excited about is the ability to run a dry run—a preview of how the migration will unfold. No more surprises or second-guessing. You’ll know exactly how things will go before committing to the full process.
 
-- **Automation at Its Best**: Once the migration is set up, why should you have to babysit it? I’m working on integrating automation into the process, allowing users to set it and let it run without constant oversight. This way, you can focus on other important aspects of your business while the system handles the migration.
+### **Automation at Its Best**
+Once the migration is set up, you shouldn't have to babysit it. I’m integrating automation into the process, so you can set it up and let it run without constant oversight. This will free up time for users to focus on more critical aspects of their business.
 
-- **Premium Features for Power Users**: For those who need more, I’m crafting a set of premium features, including video integrations and a mini-cloud for temporary data storage during migration. These added tools will make the migration process even more seamless for those with complex needs.
+### **Premium Features for Power Users**
+For those with more complex needs, I’m developing premium features, including video integrations and a mini-cloud for temporary data storage during migrations. These additional tools will make the migration process even smoother and more flexible for power users.
 
-I’m excited about the future of this project and how it’s shaping up. My goal is to make data migration smarter, faster, and easier for everyone. I believe that the features I’m working on will revolutionize how migrations are done—making them not just a task, but a streamlined experience.
+---
+
+I’m incredibly excited about how this project is shaping up. My goal is to make data migration smarter, faster, and easier for everyone. The features I’m working on will revolutionize how migrations are done—transforming them from a daunting task into a streamlined, hassle-free experience.
