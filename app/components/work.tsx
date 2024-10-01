@@ -119,7 +119,7 @@ function ProjectList({ projects, category }) {
   )
 }
 
-export function WorkProjects() {
+export function Work() {
   const { maintaining, fails, archives } = getWorkProjects()
 
   return (
