@@ -59,32 +59,33 @@ export function GET(request: Request) {
         >
           {title}
         </h2>
-       <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'between',
-        marginTop: '20px',
-      }}
-    >
-      <span
-        style={{
-          fontSize: '24px',
-          color: '#E5E7EB',
-          marginBottom: '10px',
-        }}
-      >
-        {datePublished}
-      </span>
-      <span
-        style={{
-          fontSize: '24px',
-          color: '#FFFFFF',
-        }}
-      >
-        @theteleporter_
-      </span>
-    </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: '100%',
+            marginTop: '20px',
+          }}
+        >
+          <span
+            style={{
+              fontSize: '24px',
+              color: '#E5E7EB',
+            }}
+          >
+            {datePublished}
+          </span>
+          <span
+            style={{
+              fontSize: '24px',
+              color: '#FFFFFF',
+            }}
+          >
+            @theteleporter_
+          </span>
+        </div>
       </div>
     ),
     {
