@@ -4,11 +4,11 @@ import React from 'react'
 // import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+{/**export const metadata: Metadata = {
   title: 'John Doe - Full Stack Developer',
   description: 'Resume of John Doe, Full Stack Developer',
 }
-
+**/}
 const resumeData = {
   name: "John Doe",
   title: "Full Stack Developer",
