@@ -95,9 +95,9 @@ export default function Blog({ params }) {
             }),
           }}
         />
-        <div className="mb-8">
+      {/**  <div className="mb-8">
          <AllPosts />
-        </div>
+        </div> **/}
         <h1 
           className="title font-semibold text-2xl tracking-tighter mt-8"
           style={{ viewTransitionName: `title-${post.slug}` }}
