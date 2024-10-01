@@ -99,7 +99,7 @@ export default function Blog({ params }) {
          <AllPosts />
         </div> **/}
         <h1 
-          className="title font-semibold text-2xl tracking-tighter mt-6"
+          className="title font-semibold text-2xl tracking-tighter mt-5"
           style={{ viewTransitionName: `title-${post.slug}` }}
         >
           {post.metadata.title}
