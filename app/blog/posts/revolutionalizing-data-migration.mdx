@@ -21,7 +21,7 @@ Many developers create extensions to solve issues like these, so I scoured the m
 I considered third-party apps like MultCloud, which offer cloud-to-cloud transfer solutions. However, none of them allowed remote uploads via links, and worse, they didn’t support Azure or AWS. So, I had to rule this option out too.
 
 ### 3. **Azure Function Scripts**
-I experimented with Azure Function scripts to automate the process. While somewhat effective, this approach required constant monitoring, which I didn’t have the time for. The scripts frequently crashed due to bugs. I even developed a tool called *Crept Sync* to help automate the process, but serverless functions were too limited in duration—"one minute is not enough to transfer 500GB of data."
+I experimented with Azure Function scripts to automate the process. While somewhat effective, this approach required constant monitoring, which I didn’t have the time for. The scripts frequently crashed due to bugs. I even developed a tool called *[Crept Sync](https://www.sync.crept.studio)* to help automate the process, but serverless functions were too limited in duration—"one minute is not enough to transfer 500GB of data."
 
 ### 4. **Using the Azure CLI**
 The Azure CLI allowed me to download remote files to my PC and upload them to the storage container, but the thought of downloading all that data locally? No thanks. I needed something better.
