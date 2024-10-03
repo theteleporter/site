@@ -217,6 +217,7 @@ table {
   animation: none;
 }
 
+/* Remove footer link animations */
 @keyframes footer-link-in {
   from, to {
     opacity: 1;
@@ -251,78 +252,4 @@ table {
 
 ::view-transition-new(all-posts-button) {
   animation: 300ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in;
-}
-
-/* Custom animations for work projects */
-@keyframes project-expand {
-  from { max-height: 0; opacity: 0; }
-  to { max-height: 1000px; opacity: 1; }
-}
-
-@keyframes project-collapse {
-  from { max-height: 1000px; opacity: 1; }
-  to { max-height: 0; opacity: 0; }
-}
-
-.project-description {
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.project-description[data-expanded="true"] {
-  animation: project-expand 0.5s ease-out forwards;
-}
-
-.project-description[data-expanded="false"] {
-  animation: project-collapse 0.5s ease-out forwards;
-}
-
-/* Ensure smooth transitions for project titles */
-.project-title {
-  transition: color 0.3s ease;
-}
-
-/* Add hover effect for project titles */
-.project-title:hover {
-  color: #0072F5;
-}
-
-/* Style for external link icon */
-.external-link-icon {
-  transition: transform 0.3s ease;
-}
-
-.project-title:hover .external-link-icon {
-  transform: translateX(3px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .prose h1 {
-    @apply text-3xl;
-  }
-
-  .prose h2 {
-    @apply text-lg;
-  }
-
-  .prose h3,
-  .prose h4 {
-    @apply text-base;
-  }
-}
-
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .prose a {
-    @apply text-blue-400;
-  }
-
-  .prose strong {
-    @apply text-neutral-100;
-  }
-
-  .project-title:hover {
-    color: #3694FF;
-  }
 }
