@@ -40,6 +40,8 @@ Neix enables you to protect your routes with minimal configuration while enhanci
 
 ```ts
 // Example of protecting a route with Neix
+// neix.config.js
+
 export default const Config = {
   paths: ['/admin', '/private'],         // paths to be protected
   rotateSchedule: '0 0 * * *',           // Example: rotate at midnight every day
