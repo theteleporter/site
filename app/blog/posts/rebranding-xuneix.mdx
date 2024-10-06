@@ -40,15 +40,10 @@ Neix enables you to protect your routes with minimal configuration while enhanci
 
 ```ts
 // Example of protecting a route with Neix
-import { rotateLink, verifyToken } from 'neix';
-
-const secureLink = rotateLink('/admin', rotationFrequency);
-
-// When accessing the admin route
-if (verifyToken(token)) {
-  console.log('Access granted');
-} else {
-  console.log('Access denied');
+export default const Config = {
+  paths: ['/admin', '/private'],         // paths to be protected
+  rotateSchedule: '0 0 * * *',           // Example: rotate at midnight every day
+  adminEmail: 'johndoe@example.com'      // email to deliver the rotated URL
 }
 ```
 
