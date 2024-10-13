@@ -34,7 +34,7 @@ export default function Page() {
         About
       </h1>
       <p className="mb-4">
-        {`I'm a Next.js developer who is obsessed with the web and its endless possibilities. For the past few years, I have written code mostly for my personal projects and whatever ideas came to mind. I enjoy experimenting with new technologies and frameworks, continually learning and evolving my skills. Currently, I'm working on Xuneix, a security package designed to help developers and engineers secure their products, saving them time on setting up security across their projects.`}
+        {`I'm a frontend developer who is obsessed with the web and its endless possibilities. For the past few years, I have written code mostly for my personal projects and whatever ideas came to mind. I enjoy experimenting with new technologies and frameworks, continually learning and evolving my skills. Currently, I'm working on Xuneix, a security package designed to help developers and engineers secure their products, saving them time on setting up security across their projects.`}
       </p>
       <div className="my-8">
         <BlogPosts />
