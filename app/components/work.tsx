@@ -2,7 +2,7 @@ import { Link } from 'next-view-transitions'
 
 function getWorkProjects() {
   return {
-    maintaining: [
+    comingup: [
       {
         slug: 'rage-ui',
         title: 'Rage UI Design System',
@@ -19,7 +19,7 @@ function getWorkProjects() {
         description: 'A streaming service template that enables developers to kick-start their projects.',
       },
     ],
-    fails: [
+    experiments: [
       {
         slug: 'xuneix',
         title: 'Xuneix',
@@ -85,7 +85,7 @@ function ProjectList({ projects, category }) {
           key={project.slug}
           className={`flex flex-col space-y-1 mb-4 ${category === 'maintaining' ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
         >
-          {category === 'maintaining' ? (
+          {category === 'comingup' ? (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
               <p 
                 className="text-neutral-900 dark:text-neutral-100 tracking-tight"
@@ -120,17 +120,17 @@ function ProjectList({ projects, category }) {
 }
 
 export function Work() {
-  const { maintaining, fails, archives } = getWorkProjects()
+  const { comingup, experiments, archives } = getWorkProjects()
 
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Maintaining</h2>
-        <ProjectList projects={maintaining} category="maintaining" />
+        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Coming Up</h2>
+        <ProjectList projects={comingup} category="maintaining" />
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Fails</h2>
-        <ProjectList projects={fails} category="fails" />
+        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Experiments</h2>
+        <ProjectList projects={experiments} category="experiments" />
       </div>
       <div>
         <h2 className="font-semibold text-xl mb-4 tracking-tighter">Archives</h2>
