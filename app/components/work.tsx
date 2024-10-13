@@ -83,7 +83,7 @@ function ProjectList({ projects, category }) {
       {projects.map((project) => (
         <div
           key={project.slug}
-          className={`flex flex-col space-y-1 mb-4 ${category === 'maintaining' ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
+          className={`flex flex-col space-y-1 mb-4 ${category === 'comingup' ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
         >
           {category === 'comingup' ? (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
