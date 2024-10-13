@@ -23,13 +23,13 @@ function getWorkProjects() {
       {
         slug: 'xuneix',
         title: 'Xuneix',
-        description: 'A security package for developers that didn\'t quite take off.',
+        description: 'A security package for developers, rebranded to Neix.',
         link: 'https://xuneix.theteleporter.me',
       },
       {
         slug: 'crept-sync',
         title: 'Crept Sync',
-        description: 'An ambitious synchronization tool that faced unexpected challenges.',
+        description: 'A file synchronization tool, still under development.',
         link: 'https://sync.crept.studio',
       },
     ],
