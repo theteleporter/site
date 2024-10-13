@@ -1,3 +1,7 @@
+interface BrandProps {
+  className: string;
+}
+
 export function LogoInvert(props: BrandProps) {
   return (
     <>
