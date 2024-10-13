@@ -11,7 +11,7 @@ function getWorkProjects() {
       {
         slug: 'neix',
         title: 'Neix',
-        description: 'An innovative project pushing the boundaries of web security.',
+        description: 'A project pushing the boundaries of route protection and web security.',
       },
       {
         slug: 'crept-studio',
