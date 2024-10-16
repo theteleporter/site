@@ -3,12 +3,10 @@
 import React, { useState } from 'react'
 
 interface SpoilerProps {
-  text: string;
-  className: string;
-  style: string;
+  text: string
 }
 
-export default function BlurRevealSpoiler({ text, className, style }: SpoilerProps) {
+export default function BlurRevealSpoiler({ text }: SpoilerProps) {
   const [isRevealed, setIsRevealed] = useState(false)
 
   const handleToggle = () => {
