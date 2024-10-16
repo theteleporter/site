@@ -1,4 +1,5 @@
 import { Link } from 'next-view-transitions'
+import BlurRevealSpoiler from 'app/components/blur-reveal'
 
 function getWorkProjects() {
   return {
@@ -87,11 +88,11 @@ function ProjectList({ projects, category }) {
         >
           {category === 'comingup' ? (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p 
+              <BlurRevealSpoiler 
                 className="text-neutral-900 dark:text-neutral-100 tracking-tight"
                 style={{ viewTransitionName: `title-${project.slug}` }}
+              text={project.title}
               >
-                {project.title}
               </p>
             </div>
           ) : (
