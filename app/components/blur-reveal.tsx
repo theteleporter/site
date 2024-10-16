@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 interface SpoilerProps {
   text: string,
   className: string,
-  style: string
+  style: any
 }
 
 export default function BlurRevealSpoiler({ text, className, style }: SpoilerProps) {
