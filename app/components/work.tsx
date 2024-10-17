@@ -81,16 +81,18 @@ function ExternalLinkIcon() {
 function ProjectList({ projects, category }) {
   return (
     <div>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <div
           key={project.slug}
           className={`flex flex-col space-y-1 mb-4 ${category === 'comingup' ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
         >
           {category === 'comingup' ? (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <BlurRevealSpoiler className="text-neutral-900 dark:text-neutral-100 tracking-tight"
+              <BlurRevealSpoiler 
+                className="text-neutral-900 dark:text-neutral-100 tracking-tight"
                 style={{ viewTransitionName: `title-${project.slug}` }}
-              text={project.title}
+                text={project.title}
+                showTooltip={index === 0} // Only show tooltip for the first item
               />
             </div>
           ) : (
