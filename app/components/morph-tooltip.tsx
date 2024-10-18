@@ -56,7 +56,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
                 color: '#000000',
                 padding: '5px 9px',
                 fontSize: '10px',
-                fontWeight: '300',
+                fontWeight: '500',
                 borderRadius: '7px',
                 boxShadow: '0 2px 10px rgba(255, 255, 255, 0.2)',
                 transformOrigin: 'bottom center',
