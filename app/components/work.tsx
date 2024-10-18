@@ -130,11 +130,11 @@ export function Work() {
         <ProjectList projects={comingup} category="comingup" />
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Experiments</h2>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Experiments</h2>
         <ProjectList projects={experiments} category="experiments" />
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Archives</h2>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Archives</h2>
         <ProjectList projects={archives} category="archives" />
       </div>
     </div>
