@@ -126,7 +126,7 @@ export function Work() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="font-semibold text-xl mb-4 tracking-tighter">Coming Up</h2>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Coming Up</h2>
         <ProjectList projects={comingup} category="comingup" />
       </div>
       <div>
