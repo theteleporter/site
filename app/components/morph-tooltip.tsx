@@ -26,24 +26,24 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
 
   return (
     <Tooltip.Provider delayDuration={0}>
-      <style jsx global>{`
-        @keyframes morphIn {
-          0% { transform: scale(0.1) translateY(-10px); opacity: 0; border-radius: 50%; }
-          20% { transform: scale(0.3) translateY(-8px); opacity: 0.2; border-radius: 40%; }
-          40% { transform: scale(0.5) translateY(-6px); opacity: 0.4; border-radius: 30%; }
-          60% { transform: scale(0.7) translateY(-4px); opacity: 0.6; border-radius: 20%; }
-          80% { transform: scale(0.9) translateY(-2px); opacity: 0.8; border-radius: 10%; }
-          100% { transform: scale(1) translateY(0); opacity: 1; border-radius: 6px; }
-        }
-        @keyframes morphOut {
-          0% { transform: scale(1) translateY(0); opacity: 1; border-radius: 6px; }
-          20% { transform: scale(0.9) translateY(2px); opacity: 0.8; border-radius: 10%; }
-          40% { transform: scale(0.7) translateY(4px); opacity: 0.6; border-radius: 20%; }
-          60% { transform: scale(0.5) translateY(6px); opacity: 0.4; border-radius: 30%; }
-          80% { transform: scale(0.3) translateY(8px); opacity: 0.2; border-radius: 40%; }
-          100% { transform: scale(0.1) translateY(10px); opacity: 0; border-radius: 50%; }
-        }
-      `}</style>
+    <style jsx global>{`
+  @keyframes morphIn {
+    0% { transform: scale(0.1) translateY(-10px); opacity: 0; border-radius: 50%; }
+    20% { transform: scale(0.3) translateY(-8px); opacity: 0.2; border-radius: 40%; }
+    40% { transform: scale(0.5) translateY(-6px); opacity: 0.4; border-radius: 30%; }
+    60% { transform: scale(0.7) translateY(-4px); opacity: 0.6; border-radius: 20%; }
+    80% { transform: scale(0.9) translateY(-2px); opacity: 0.8; border-radius: 10%; }
+    100% { transform: scale(1) translateY(0); opacity: 1; border-radius: 6px; }
+  }
+  @keyframes morphOut {
+    0% { transform: scale(1) translateY(0); opacity: 1; border-radius: 6px; }
+    20% { transform: scale(0.9) translateY(-2px); opacity: 0.8; border-radius: 10%; }
+    40% { transform: scale(0.7) translateY(-4px); opacity: 0.6; border-radius: 20%; }
+    60% { transform: scale(0.5) translateY(-6px); opacity: 0.4; border-radius: 30%; }
+    80% { transform: scale(0.3) translateY(-8px); opacity: 0.2; border-radius: 40%; }
+    100% { transform: scale(0.1) translateY(-10px); opacity: 0; border-radius: 50%; }
+  }
+`}</style>
       <Tooltip.Root open={visible}>
         <Tooltip.Trigger asChild>
           {children}
