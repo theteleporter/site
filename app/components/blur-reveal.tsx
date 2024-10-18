@@ -35,13 +35,13 @@ export default function BlurRevealSpoiler({ text, className = '', style = {}, sh
         onMouseLeave={handleMouseLeave}
         style={{
           ...style,
-          backgroundColor: isRevealed ? 'transparent' : 'rgba(255, 255, 255, 0.1)',
-          padding: '2px 6px',
-          transition: 'background-color 0.3s ease',
+          backgroundColor: isRevealed ? 'transparent' : 'rgba(255, 255, 255, 0)',
+          padding: '2px 0',
+          transition: 'background-color 0.5s ease',
         }}
       >
         <span
-          className={`transition-[filter] duration-300 ease-in-out ${
+          className={`transition-[filter] duration-500 ease-in-out ${
             isRevealed ? 'blur-none' : 'blur-sm'
           }`}
           style={{
