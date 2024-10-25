@@ -7,6 +7,7 @@ interface MorphTooltipProps {
   children: React.ReactNode
   content: string
   visible: boolean
+  isDarkMode?: boolean
 }
 
 const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
@@ -58,7 +59,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
           <Tooltip.Content sideOffset={5} className="tooltip-content">
             <div
               style={{
-                backgroundColor: 'black',
+                backgroundColor: isDarkMode ? 'black' : 'white',
                 color: 'white',
                 padding: '8px 12px',
                 fontSize: '13px',
