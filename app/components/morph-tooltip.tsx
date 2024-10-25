@@ -7,7 +7,6 @@ interface MorphTooltipProps {
   children: React.ReactNode
   content: string
   visible: boolean
-  isDarkMode?: boolean
 }
 
 const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
@@ -43,6 +42,11 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
           fill: black;
           filter: url(#gooey);
         }
+        @media (prefers-color-scheme: light) {
+          .tooltip-arrow {
+            fill: white;
+          }
+        }
       `}</style>
       <svg width="0" height="0">
         <filter id="gooey">
@@ -58,14 +62,12 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
         <Tooltip.Portal>
           <Tooltip.Content sideOffset={5} className="tooltip-content">
             <div
+              className="bg-black text-white dark:bg-black dark:text-white bg-white text-black shadow-lg rounded-lg"
               style={{
-                backgroundColor: isDarkMode ? 'black' : 'white',
-                color: 'white',
                 padding: '8px 12px',
                 fontSize: '13px',
                 fontWeight: '500',
                 lineHeight: '1.4',
-                borderRadius: '8px',
                 transformOrigin: 'bottom center',
                 ...animationStyles,
               }}
