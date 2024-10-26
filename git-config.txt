@@ -1,0 +1,5 @@
+# to pull multiple branches from remote to local
+
+git branch -r | grep -v '\->' | sed -e 's/^origin\///' | while read remote; do echo "parsing branch $remote"; branch=${remote/origin\//}; git checkout "$branch"; git reset --hard $remote ; git pull; echo "$remote done";done 
+
+
