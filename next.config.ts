@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/affiliate-programs',
-        destination: '/blog',
+        destination: 'https://affiliate-links.vercel.app',
         permanent: true,
       },
       {
