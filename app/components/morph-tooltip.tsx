@@ -39,7 +39,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
           filter: url(#gooey);
         }
         .tooltip-arrow {
-          fill: black;
+          fill: #232323;
           filter: url(#gooey);
         }
         @media (prefers-color-scheme: light) {
@@ -62,7 +62,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
         <Tooltip.Portal>
           <Tooltip.Content sideOffset={5} className="tooltip-content">
             <div
-              className="text-black dark:bg-black dark:text-white bg-white border-stone-600 shadow-lg rounded-lg"
+              className="text-black dark:bg-[#232323] dark:text-white bg-white border-[#212121] shadow-lg rounded-lg"
               style={{
                 padding: '8px 12px',
                 fontSize: '13px',
