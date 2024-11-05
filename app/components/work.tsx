@@ -119,3 +119,24 @@ function ProjectList({ projects, category }) {
     </div>
   )
 }
+
+export function Work() {
+  const { comingup, experiments, archives } = getWorkProjects()
+
+  return (
+    <div className="space-y-8">
+      <div>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Coming Up</h2>
+        <ProjectList projects={comingup} category="comingup" />
+      </div>
+      <div>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Experiments</h2>
+        <ProjectList projects={experiments} category="experiments" />
+      </div>
+      <div>
+        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Archives</h2>
+        <ProjectList projects={archives} category="archives" />
+      </div>
+    </div>
+  )
+}
