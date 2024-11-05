@@ -1,5 +1,6 @@
 import { Link } from 'next-view-transitions'
 import BlurRevealSpoiler from 'app/components/blur-reveal'
+import { LinkIcon } from 'app/components/micro-icons/link';
 
 function getWorkProjects() {
   return {
@@ -107,7 +108,7 @@ function ProjectList({ projects, category }) {
                 style={{ viewTransitionName: `title-${project.slug}` }}
               >
                 {project.title}
-                <ExternalLinkIcon />
+                <LinkIcon />
               </p>
             </a>
           )}
