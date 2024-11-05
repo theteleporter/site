@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import React, { useEffect, useState } from 'react'
-import * as Tooltip from '@radix-ui/react-tooltip'
+import React, { useEffect, useState } from 'react';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 interface MorphTooltipProps {
-  children: React.ReactNode
-  content: string
-  visible: boolean
+  children: React.ReactNode;
+  content: string;
+  visible: boolean;
 }
 
 const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
@@ -62,13 +62,14 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
         <Tooltip.Portal>
           <Tooltip.Content sideOffset={5} className="tooltip-content">
             <div
-              className="text-black dark:bg-[#232323] dark:text-white bg-white border-[#262626] shadow-lg rounded-lg"
+              className="text-black dark:bg-[#f8f8f8] dark:text-black bg-white border-[#e0e0e0] shadow-lg rounded-lg"
               style={{
                 padding: '8px 12px',
                 fontSize: '13px',
                 fontWeight: '500',
                 lineHeight: '1.4',
                 transformOrigin: 'bottom center',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Softer shadow
                 ...animationStyles,
               }}
             >
