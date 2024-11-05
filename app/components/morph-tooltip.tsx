@@ -62,7 +62,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
         <Tooltip.Portal>
           <Tooltip.Content sideOffset={5} className="tooltip-content">
             <div
-              className="text-black dark:bg-stone-800 dark:text-white bg-white shadow-lg rounded-lg"
+              className="text-black dark:bg-stone-800 dark:text-white bg-white border-stone-600 shadow-lg rounded-lg"
               style={{
                 padding: '8px 12px',
                 fontSize: '13px',
