@@ -103,7 +103,7 @@ function ProjectList({ projects, category }) {
               className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 group"
             >
               <p 
-                className="text-neutral-900 dark:text-neutral-100 tracking-tight group-hover:underline transition-all duration-200"
+                className="text-neutral-900 dark:text-neutral-100 tracking-tight transition-all duration-200"
                 style={{ viewTransitionName: `title-${project.slug}` }}
               >
                 {project.title}
