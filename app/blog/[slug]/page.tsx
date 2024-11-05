@@ -94,7 +94,7 @@ export default function Blog({ params }) {
             }),
           }}
         />
-   <ViewTransitions>
+   {/**<ViewTransitions>**/}
       {/**  <div className="mb-8">
          <AllPosts />
         </div> **/}
@@ -118,7 +118,7 @@ export default function Blog({ params }) {
         >
           <CustomMDX source={post.content} />
         </article>
-       </ViewTransitions>
+       {/**</ViewTransitions>**/}
       </section>
   )
 }
