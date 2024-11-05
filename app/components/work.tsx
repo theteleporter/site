@@ -69,7 +69,7 @@ function ExternalLinkIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="inline-block ml-1"
+      className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
     >
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
       <polyline points="15 3 21 3 21 9" />
@@ -116,27 +116,6 @@ function ProjectList({ projects, category }) {
           </p>
         </div>
       ))}
-    </div>
-  )
-}
-
-export function Work() {
-  const { comingup, experiments, archives } = getWorkProjects()
-
-  return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Coming Up</h2>
-        <ProjectList projects={comingup} category="comingup" />
-      </div>
-      <div>
-        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Experiments</h2>
-        <ProjectList projects={experiments} category="experiments" />
-      </div>
-      <div>
-        <h2 className="font-semibold text-xl mb-8 tracking-tighter">Archives</h2>
-        <ProjectList projects={archives} category="archives" />
-      </div>
     </div>
   )
 }
