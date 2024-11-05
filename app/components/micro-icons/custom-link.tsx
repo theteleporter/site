@@ -24,7 +24,7 @@ const LinkIcon = () => {
 
   return (
     <div
-      className="cursor-pointer select-none p-1 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
+      className="cursor-pointer select-none p-1 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center group"
       onMouseEnter={() => controls.start('animate')}
       onMouseLeave={() => controls.start('initial')}
     >
@@ -38,7 +38,7 @@ const LinkIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="inline-block"
+        className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
       >
         <motion.path
           d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
