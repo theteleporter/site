@@ -71,7 +71,6 @@ export default function Blog({ params }) {
   }
 
   return (
-    <ViewTransitions>
       <section>
         <script
           type="application/ld+json"
@@ -95,6 +94,7 @@ export default function Blog({ params }) {
             }),
           }}
         />
+   <ViewTransitions>
       {/**  <div className="mb-8">
          <AllPosts />
         </div> **/}
@@ -118,7 +118,7 @@ export default function Blog({ params }) {
         >
           <CustomMDX source={post.content} />
         </article>
+       </ViewTransitions>
       </section>
-    </ViewTransitions>
   )
 }
