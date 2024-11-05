@@ -17,6 +17,16 @@ const nextConfig = {
         destination: 'https://x.com/@theteleporter_',
         permanent: true,
       },
+      {
+        source: '/projects',
+        destination: '/work',
+        permanent: true,
+      },
+      {
+        source: '/guestbook',
+        destination: 'https://og.theteleporter.me/guestbook',
+        permanent: true,
+      },
     ]
 },
 }
