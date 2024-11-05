@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     default: 'The Teleporter',
     template: '%s | The Teleporter',
   },
-  description: 'I make crappy websites.',
+  description: 'The Teleporter, a skilled design engineer and developer, is known for crafting high-quality web components with an exceptional attention to detail and a focus on user-centered design. Balancing functionality with aesthetic precision, The Teleporter delivers tailored solutions that are both visually engaging and intuitively functional, pushing the boundaries of modern web development.',
   openGraph: {
     title: 'The Teleporter',
-    description: 'I make crappy websites.',
+    description: 'The Teleporter, a skilled design engineer and developer, is known for crafting high-quality web components with an exceptional attention to detail and a focus on user-centered design. Balancing functionality with aesthetic precision, The Teleporter delivers tailored solutions that are both visually engaging and intuitively functional, pushing the boundaries of modern web development.',
     url: baseUrl,
     siteName: 'The Teleporter',
     locale: 'en_US',
