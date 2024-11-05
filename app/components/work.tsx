@@ -1,6 +1,6 @@
 import { Link } from 'next-view-transitions'
 import BlurRevealSpoiler from 'app/components/blur-reveal'
-import { LinkIcon } from 'app/components/micro-icons/link';
+import { LinkIcon } from 'app/components/micro-icons/custom-link';
 
 function getWorkProjects() {
   return {
