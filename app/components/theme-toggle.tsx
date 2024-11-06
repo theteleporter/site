@@ -26,12 +26,6 @@ const MoonIcon = () => (
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
-  const [currentTheme, setCurrentTheme] = React.useState(resolvedTheme)
-
-  // Update the local state whenever resolvedTheme changes
-  React.useEffect(() => {
-    setCurrentTheme(resolvedTheme)
-  }, [resolvedTheme])
 
   return (
     <div className="inline-flex rounded-full dark:bg-[#1a1a1a] p-0 border dark:border-[#6F6F6F] bg-[#F7F7F7] border-[#6F6F6F]">
@@ -39,7 +33,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 cursor-pointer transition-colors ${
-            currentTheme === "system"
+            resolvedTheme === "system"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
@@ -50,7 +44,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 cursor-pointer transition-colors ${
-            currentTheme === "light"
+            resolvedTheme === "light"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
@@ -61,7 +55,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 cursor-pointer transition-colors ${
-            currentTheme === "dark"
+            resolvedTheme === "dark"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
