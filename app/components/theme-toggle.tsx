@@ -3,10 +3,11 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 
+// Adjusted icon size and details
 const SystemIcon = () => (
   <svg
-    width="16"
-    height="16"
+    width="14"
+    height="14"
     viewBox="0 0 16 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -17,8 +18,8 @@ const SystemIcon = () => (
 
 const SunIcon = () => (
   <svg
-    width="16"
-    height="16"
+    width="14"
+    height="14"
     viewBox="0 0 16 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +31,8 @@ const SunIcon = () => (
 
 const MoonIcon = () => (
   <svg
-    width="16"
-    height="16"
+    width="14"
+    height="14"
     viewBox="0 0 16 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +46,12 @@ export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
-    <div className="inline-flex rounded-full bg-[#161614] p-[1px] border border-[#6F6F6F]">
-      <div className="flex gap-[1px]">
+    <div className="inline-flex rounded-full bg-[#1a1a1a] p-0.5 border border-[#6F6F6F]">
+      <div className="flex gap-0.5">
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "system" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "system" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use system theme"
         >
@@ -59,7 +60,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "light" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "light" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use light theme"
         >
@@ -68,7 +69,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "dark" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "dark" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use dark theme"
         >
