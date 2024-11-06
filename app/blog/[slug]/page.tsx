@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
-import { Link, ViewTransitions } from 'next-view-transitions'
+import { Link } from 'next-view-transitions'
 import { AllPosts } from 'app/components/all-posts'
 
 export async function generateStaticParams() {
@@ -94,7 +94,6 @@ export default function Blog({ params }) {
             }),
           }}
         />
-   {/**<ViewTransitions>**/}
       <div className="mb-8">
          <AllPosts />
         </div>
@@ -118,7 +117,6 @@ export default function Blog({ params }) {
         >
           <CustomMDX source={post.content} />
         </article>
-       {/**</ViewTransitions>**/}
       </section>
   )
 }
