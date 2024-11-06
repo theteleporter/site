@@ -34,7 +34,7 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter"> About
        {/**<LogoInvert className={"w-52 h-auto navbar-logo"} />**/}
       </h1>
-      <p className="mb-4 tracking-wide font-mono">
+      <p className="mb-4 tracking-wide">
         {`I'm a frontend developer who is obsessed with the web and its endless possibilities. For the past few years, I have written code mostly for my personal projects and whatever ideas came to mind. I enjoy experimenting with new technologies and frameworks, continually learning and evolving my skills. Currently, I'm working on Neix, a security package designed to help developers and engineers secure their products, saving them time on setting up security across their projects.`}
       </p>
       <div className="my-8">
