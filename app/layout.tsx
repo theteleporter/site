@@ -60,7 +60,7 @@ export default function RootLayout({
           GeistSans.variable,
           GeistMono.variable
         )}
-        suppressHydrationWarning
+      
       >
         <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
             <div className="text-black bg-white dark:text-white dark:bg-[#161614]">
