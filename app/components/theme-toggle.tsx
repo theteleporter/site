@@ -41,7 +41,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "system"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
+              : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
           aria-label="Use system theme"
         >
@@ -52,7 +52,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "light"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
+              : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
           aria-label="Use light theme"
         >
@@ -63,7 +63,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "dark"
               ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
+              : "text-[#8C8C8C] border border-transparent dark:hover:text-white hover:text-[#4A4A4A]"
           }`}
           aria-label="Use dark theme"
         >
