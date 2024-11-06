@@ -44,7 +44,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
         }
         @media (prefers-color-scheme: light) {
           .tooltip-arrow {
-            fill: #ECECEC;
+            fill: #F7F7F7;
           }
         }
       `}</style>
