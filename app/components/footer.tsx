@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { betaFeatures } from '@vercel/flags/next';
+import Link from 'next/link';
 import { ThemeToggle } from 'app/components/theme-toggle';
 
 function ArrowIcon() {
@@ -15,10 +16,13 @@ function ArrowIcon() {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
 
-export default function Footer() {
+export default async function Footer() {
+  // Fetch beta feature flag
+  const isBeta = await betaFeatures;
+
   return (
     <footer className="mb-16">
       <ul className="font-sm text-sm mt-8 flex flex-row space-x-2 text-neutral-600 md:flex-row md:space-x-2 md:space-y-0 dark:text-neutral-300">
@@ -49,7 +53,9 @@ export default function Footer() {
         <p style={{ viewTransitionName: 'footer-copyright' }}>
           &copy; {new Date().getFullYear()} The Teleporter
         </p>
-       {/** <ThemeToggle />**/}
+        {isBeta && (
+          <ThemeToggle />
+        )}
         <Link
           className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
           href="/rss"
@@ -59,5 +65,5 @@ export default function Footer() {
         </Link>
       </div>
     </footer>
-  )
+  );
 }
