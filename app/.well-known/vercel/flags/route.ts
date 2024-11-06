@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     definitions: {
       newFeature: {
         description: 'Controls whether the new feature is visible',
-        origin: 'https://site-nukeboom.vercel.app',
+        origin: ['https://site-nukeboom.vercel.app', 'https://theteleporter.me'],
         options: [
           { value: false, label: 'Off' },
           { value: true, label: 'On' },
