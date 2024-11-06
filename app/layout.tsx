@@ -52,7 +52,7 @@ export default function RootLayout({
         className={cx(
           GeistSans.variable,
           GeistMono.variable
-        )}
+        ), "text-black bg-white dark:text-white dark:bg-[#161614]" }
         suppressHydrationWarning
       >
         <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
