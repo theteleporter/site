@@ -34,37 +34,39 @@ export function ThemeToggle() {
   }, [resolvedTheme])
 
   return (
-    <div className="inline-flex rounded-full bg-[#1a1a1a] p-0 border border-[#6F6F6F]">
+    <div className="inline-flex rounded-full p-1 border border-transparent">
       <div className="flex gap-0.5">
+        {/* System Button */}
         <button
           onClick={() => setTheme("system")}
-          className={`rounded-full p-1 transition-colors ${
-            currentTheme === "system"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
-          }`}
+          className={`rounded-full p-1 transition-colors 
+            ${currentTheme === "system" ? 
+              "text-white bg-[#333] border border-[#6F6F6F]" : 
+              "text-[#8C8C8C] border-transparent hover:text-white hover:bg-[#eaeaea]"}`}
           aria-label="Use system theme"
         >
           <SystemIcon />
         </button>
+        
+        {/* Light Mode Button */}
         <button
           onClick={() => setTheme("light")}
-          className={`rounded-full p-1 transition-colors ${
-            currentTheme === "light"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
-          }`}
+          className={`rounded-full p-1 transition-colors 
+            ${currentTheme === "light" ? 
+              "text-black bg-[#fff] border border-[#6F6F6F]" : 
+              "text-[#8C8C8C] border-transparent hover:text-white hover:bg-[#eaeaea]"}`}
           aria-label="Use light theme"
         >
           <SunIcon />
         </button>
+
+        {/* Dark Mode Button */}
         <button
           onClick={() => setTheme("dark")}
-          className={`rounded-full p-1 transition-colors ${
-            currentTheme === "dark"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white"
-          }`}
+          className={`rounded-full p-1 transition-colors 
+            ${currentTheme === "dark" ? 
+              "text-white bg-[#333] border border-[#6F6F6F]" : 
+              "text-[#8C8C8C] border-transparent hover:text-white hover:bg-[#eaeaea]"}`}
           aria-label="Use dark theme"
         >
           <MoonIcon />
