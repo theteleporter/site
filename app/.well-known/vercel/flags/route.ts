@@ -7,8 +7,8 @@ export async function GET(request: NextRequest) {
  
   return NextResponse.json<ApiData>({
     definitions: {
-      newFeature: {
-        description: 'Controls whether the new feature is visible',
+      beta: {
+        description: 'Controls whether the new features can be visible, tested before they are rolled out to the public',
         origin: ['https://site-nukeboom.vercel.app', 'https://theteleporter.me'],
         options: [
           { value: false, label: 'Off' },
