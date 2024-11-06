@@ -38,8 +38,7 @@ const LinkIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="inline-block ml-1 opacity-100 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ visibility: 'hidden' }} // Ensure space is occupied even when not visible
+        className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
       >
         <motion.path
           d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
