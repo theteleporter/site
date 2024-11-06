@@ -1,4 +1,4 @@
-import { betaFeatures } from '@vercel/flags/next';
+import { betaFeatures } from 'flags';
 import Link from 'next/link';
 import { ThemeToggle } from 'app/components/theme-toggle';
 
