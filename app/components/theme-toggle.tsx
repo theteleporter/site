@@ -34,13 +34,13 @@ export function ThemeToggle() {
   }, [resolvedTheme])
 
   return (
-    <div className="inline-flex rounded-full bg-[#1a1a1a] p-0 border border-[#6F6F6F]">
+    <div className="inline-flex rounded-full dark:bg-[#1a1a1a] p-0 border dark:border-[#6F6F6F] bg-[#F7F7F7] border-[#6F6F6F]">
       <div className="flex gap-0.5">
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "system"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use system theme"
@@ -51,7 +51,7 @@ export function ThemeToggle() {
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "light"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use light theme"
@@ -62,7 +62,7 @@ export function ThemeToggle() {
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "dark"
-              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use dark theme"
