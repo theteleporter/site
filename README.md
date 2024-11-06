@@ -11,7 +11,7 @@ It includes:
 - Tailwind v4
 - Vercel Speed Insights / Web Analytics
 - Geist font
-
+ 
 ## How to Use
 
 You can choose from one of the following two methods to use this repository:
