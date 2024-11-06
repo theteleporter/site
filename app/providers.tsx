@@ -10,10 +10,10 @@ interface ThemeProviderProps {
   enableSystem?: boolean
 }
 
-export function ThemeProvider({ 
+export function ThemeProvider(
   children,
   ...props
-}: ThemeProviderProps) {
+) {
   return (
     <NextThemeProvider {...props}>
       {children}
