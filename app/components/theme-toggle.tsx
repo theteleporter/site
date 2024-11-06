@@ -38,8 +38,10 @@ export function ThemeToggle() {
       <div className="flex gap-0.5">
         <button
           onClick={() => setTheme("system")}
-          className={`rounded-full p-1 border border-transparent transition-colors ${
-            currentTheme === "system" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
+          className={`rounded-full p-1 transition-colors ${
+            currentTheme === "system"
+              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use system theme"
         >
@@ -47,8 +49,10 @@ export function ThemeToggle() {
         </button>
         <button
           onClick={() => setTheme("light")}
-          className={`rounded-full p-1 border border-transparent transition-colors ${
-            currentTheme === "light" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
+          className={`rounded-full p-1 transition-colors ${
+            currentTheme === "light"
+              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use light theme"
         >
@@ -56,8 +60,10 @@ export function ThemeToggle() {
         </button>
         <button
           onClick={() => setTheme("dark")}
-          className={`rounded-full p-1 border border-transparent transition-colors ${
-            currentTheme === "dark" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
+          className={`rounded-full p-1 transition-colors ${
+            currentTheme === "dark"
+              ? "text-white bg-[#333] border border-[#6F6F6F]"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use dark theme"
         >
