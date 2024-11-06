@@ -21,7 +21,7 @@ function ArrowIcon() {
 
 export default async function Footer() {
   // Fetch beta feature flag
-  const isBeta = await betaFeatures;
+  const beta = await betaFeatures;
 
   return (
     <footer className="mb-16">
@@ -53,9 +53,7 @@ export default async function Footer() {
         <p style={{ viewTransitionName: 'footer-copyright' }}>
           &copy; {new Date().getFullYear()} The Teleporter
         </p>
-        {isBeta && (
-          <ThemeToggle />
-        )}
+  { beta ?   <ThemeToggle /> : <></> }
         <Link
           className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
           href="/rss"
