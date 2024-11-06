@@ -41,7 +41,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "system"
               ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white dark:text-gray-300 dark:hover:text-white"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use system theme"
         >
@@ -52,7 +52,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "light"
               ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white dark:text-gray-300 dark:hover:text-white"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use light theme"
         >
@@ -63,7 +63,7 @@ export function ThemeToggle() {
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "dark"
               ? "text-white bg-[#333] border border-[#6F6F6F]"
-              : "text-[#8C8C8C] border border-transparent hover:text-white dark:text-gray-300 dark:hover:text-white"
+              : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use dark theme"
         >
