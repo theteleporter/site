@@ -21,7 +21,7 @@ function ArrowIcon() {
 
 export default async function Footer() {
   // Fetch beta feature flag
-  const beta = await betaFeatures;
+  const beta = await betaFeatures();
 
   return (
     <footer className="mb-16">
