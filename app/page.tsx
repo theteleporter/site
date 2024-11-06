@@ -31,7 +31,7 @@ export const metadata = {
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tight"> About
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter"> About
        {/**<LogoInvert className={"w-52 h-auto navbar-logo"} />**/}
       </h1>
       <p className="mb-4 tracking-wide">
