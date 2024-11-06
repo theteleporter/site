@@ -24,7 +24,7 @@ const LinkIcon = () => {
 
   return (
     <div
-      className="cursor-pointer select-none p-1 rounded-md transition-colors duration-200 flex items-center justify-center group"
+      className="cursor-pointer select-none p-1 rounded-md transition-colors duration-200 flex items-center justify-center group hover:bg-accent"
       onMouseEnter={() => controls.start('animate')}
       onMouseLeave={() => controls.start('initial')}
     >
