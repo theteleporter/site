@@ -39,7 +39,7 @@ const MorphTooltip = ({ children, content, visible }: MorphTooltipProps) => {
           filter: url(#gooey);
         }
         .tooltip-arrow {
-          fill: #F7F7F7;
+          fill: #ECECEC;
           filter: url(#gooey);
         }
         @media (prefers-color-scheme: light) {
