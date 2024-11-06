@@ -51,7 +51,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "system" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "system" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use system theme"
         >
@@ -60,7 +60,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "light" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "light" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use light theme"
         >
@@ -69,7 +69,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 transition-colors ${
-            resolvedTheme === "dark" ? "text-white bg-[#333]" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "dark" ? "text-white bg-[#333] border-[#6F6F6F]" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use dark theme"
         >
