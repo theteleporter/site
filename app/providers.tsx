@@ -8,7 +8,6 @@ interface ThemeProviderProps {
   attribute?: string
   defaultTheme?: string
   enableSystem?: boolean
-  storageKey?: string
 }
 
 export function ThemeProvider({ 
