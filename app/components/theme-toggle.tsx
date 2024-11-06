@@ -40,7 +40,7 @@ export function ThemeToggle() {
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "system"
-              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
+              ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use system theme"
@@ -51,7 +51,7 @@ export function ThemeToggle() {
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "light"
-              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
+              ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use light theme"
@@ -62,7 +62,7 @@ export function ThemeToggle() {
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 transition-colors ${
             currentTheme === "dark"
-              ? "text-white dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
+              ? "dark:text-white text-[#707070] dark:bg-[#333] border dark:border-[#6F6F6F] bg-[#ECECEC] border-[#6F6F6F]"
               : "text-[#8C8C8C] border border-transparent hover:text-white"
           }`}
           aria-label="Use dark theme"
