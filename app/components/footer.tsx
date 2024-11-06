@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ThemeToggler } from 'app/components/theme-toggle';
+import { ThemeToggle } from 'app/components/theme-toggle';
 
 function ArrowIcon() {
   return (
@@ -49,7 +49,7 @@ export default function Footer() {
         <p style={{ viewTransitionName: 'footer-copyright' }}>
           &copy; {new Date().getFullYear()} The Teleporter
         </p>
-        <ThemeToggler />
+        <ThemeToggle />
         <Link
           className="flex items-center transition-all duration-500 ease-out hover:text-neutral-800 dark:hover:text-neutral-100 cursor-pointer footer-link"
           href="/rss"
