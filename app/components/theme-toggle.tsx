@@ -45,8 +45,8 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="inline-flex rounded-full bg-[#000000] p-[2px]">
-      <div className="flex gap-[2px]">
+    <div className="inline-flex rounded-full bg-[#161614] p-[1px] border-">
+      <div className="flex gap-[1px]">
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
