@@ -1,43 +1,80 @@
-'use client';
+"use client"
 
-import { SunIcon } from 'app/components/micro-icons/sun';
-import { MoonIcon } from 'app/components/micro-icons/moon';
-import { DeviceIcon } from 'app/components/micro-icons/device';
-import { useState, useEffect } from 'react';
+import * as React from "react"
+import { useTheme } from "next-themes"
 
-const ThemeToggler = () => {
-  const [isLightTheme, setIsLightTheme] = useState(true);
+const SystemIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2zm10 12h-4v-1h4v1z"/>
+  </svg>
+)
 
-  // Load theme from localStorage or default to light
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setIsLightTheme(savedTheme === 'light');
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    } else {
-      // Set default theme to light
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  }, []);
+const SunIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="8" cy="8" r="4" />
+    <path d="M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </svg>
+)
 
-  // Toggle the theme and save it to localStorage
-  const toggleTheme = () => {
-    const newTheme = isLightTheme ? 'dark' : 'light';
-    setIsLightTheme(!isLightTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
+const MoonIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162z"/>
+  </svg>
+)
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useTheme()
 
   return (
-    <div className="flex space-x-2">
-      <div onClick={toggleTheme} className="cursor-pointer">
-        {isLightTheme ? <MoonIcon /> : <SunIcon />}
-      </div>
-      <div onClick={toggleTheme} className="cursor-pointer">
-        <DeviceIcon />
+    <div className="inline-flex rounded-full bg-[#000000] p-[2px]">
+      <div className="flex gap-[2px]">
+        <button
+          onClick={() => setTheme("system")}
+          className={`rounded-full p-2 transition-colors ${
+            theme === "system" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+          }`}
+          aria-label="Use system theme"
+        >
+          <SystemIcon />
+        </button>
+        <button
+          onClick={() => setTheme("light")}
+          className={`rounded-full p-2 transition-colors ${
+            theme === "light" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+          }`}
+          aria-label="Use light theme"
+        >
+          <SunIcon />
+        </button>
+        <button
+          onClick={() => setTheme("dark")}
+          className={`rounded-full p-2 transition-colors ${
+            theme === "dark" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+          }`}
+          aria-label="Use dark theme"
+        >
+          <MoonIcon />
+        </button>
       </div>
     </div>
-  );
-};
-
-export { ThemeToggler };
+  )
+}
