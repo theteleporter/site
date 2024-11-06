@@ -42,7 +42,7 @@ const MoonIcon = () => (
 )
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   return (
     <div className="inline-flex rounded-full bg-[#161614] p-[1px] border border-[#6F6F6F]">
@@ -50,7 +50,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("system")}
           className={`rounded-full p-1 transition-colors ${
-            theme === "system" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "system" ? "text-white" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use system theme"
         >
@@ -59,7 +59,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("light")}
           className={`rounded-full p-1 transition-colors ${
-            theme === "light" ? "text-white" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "light" ? "text-white" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use light theme"
         >
@@ -68,7 +68,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("dark")}
           className={`rounded-full p-1 transition-colors ${
-            theme === "dark" ? "text-black" : "text-[#8C8C8C] hover:text-white"
+            resolvedTheme === "dark" ? "text-white" : "text-[#8C8C8C] hover:text-white"
           }`}
           aria-label="Use dark theme"
         >
